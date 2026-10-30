@@ -66,6 +66,10 @@
               <span class="lang-en">Get Early Access</span>
               <span class="lang-es">Acceso anticipado</span>
             </a>
+            <a href="#specials" class="border border-orange-400 text-orange-400 hover:bg-orange-500 hover:text-white font-semibold px-8 py-4 rounded-full text-center transition">
+              <span class="lang-en">Check Specials Near Me</span>
+              <span class="lang-es">Especiales cerca de mí</span>
+            </a>
             <a href="#how" class="border border-slate-500 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-center transition">
               <span class="lang-en">See How It Works</span>
               <span class="lang-es">Cómo funciona</span>
@@ -127,6 +131,25 @@
           </p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Member Specials Near Me -->
+  <section id="specials" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        <span class="lang-en">Specials Near You</span>
+        <span class="lang-es">Especiales cerca de ti</span>
+      </h2>
+      <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
+        <span class="lang-en">Members: Use your location to find current Roada specials at gas stations and restaurants nearby.</span>
+        <span class="lang-es">Miembros: Usa tu ubicación para encontrar especiales Roada actuales en gasolineras y restaurantes cercanos.</span>
+      </p>
+      <button id="memberGeoBtn" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-4 rounded-full text-lg transition shadow-lg">
+        <span class="lang-en">Check Specials Near Me</span>
+        <span class="lang-es">Ver especiales cerca de mí</span>
+      </button>
+      <div id="memberGeoResult" class="text-left mt-8 p-6 bg-slate-800 rounded-2xl hidden max-w-xl mx-auto text-sm"></div>
     </div>
   </section>
 
@@ -447,6 +470,50 @@
     const toggle = document.getElementById('langToggle');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('spanish');
+    });
+
+    // Member geolocation for specials near me
+    document.getElementById('memberGeoBtn').addEventListener('click', () => {
+      const result = document.getElementById('memberGeoResult');
+      result.classList.remove('hidden');
+      result.innerHTML = document.body.classList.contains('spanish') 
+        ? '<p class="text-slate-300">Obteniendo ubicación...</p>' 
+        : '<p class="text-slate-300">Getting your location...</p>';
+
+      if (!navigator.geolocation) {
+        result.innerHTML = document.body.classList.contains('spanish')
+          ? '<p class="text-red-400">Geolocalización no disponible en este navegador.</p>'
+          : '<p class="text-red-400">Geolocation is not available in this browser.</p>';
+        return;
+      }
+
+      navigator.geolocation.getCurrentPosition(
+        (pos) => {
+          const { latitude, longitude } = pos.coords;
+          result.innerHTML = document.body.classList.contains('spanish')
+            ? `<p class="mb-3"><strong>Ubicación:</strong> ${latitude.toFixed(4)}, ${longitude.toFixed(4)}</p>
+               <p class="font-semibold text-orange-400 mb-2">Especiales Roada cerca de ti:</p>
+               <ul class="space-y-2 text-slate-300">
+                 <li>• Gasolinera independiente a 0.8 mi — <span class="text-white">10¢ off por galón</span></li>
+                 <li>• Comida rápida a 1.2 mi — <span class="text-white">Combo miembro $5.99</span></li>
+                 <li>• Restaurante a 2.1 mi — <span class="text-white">15% off almuerzo</span></li>
+                 <li>• Parada de camiones a 3.4 mi — <span class="text-white">Café gratis con compra</span></li>
+               </ul>`
+            : `<p class="mb-3"><strong>Location:</strong> ${latitude.toFixed(4)}, ${longitude.toFixed(4)}</p>
+               <p class="font-semibold text-orange-400 mb-2">Roada specials near you:</p>
+               <ul class="space-y-2 text-slate-300">
+                 <li>• Independent gas station 0.8 mi — <span class="text-white">10¢ off per gallon</span></li>
+                 <li>• Fast food 1.2 mi — <span class="text-white">Member combo $5.99</span></li>
+                 <li>• Restaurant 2.1 mi — <span class="text-white">15% off lunch</span></li>
+                 <li>• Truck stop 3.4 mi — <span class="text-white">Free coffee with purchase</span></li>
+               </ul>`;
+        },
+        (err) => {
+          result.innerHTML = document.body.classList.contains('spanish')
+            ? '<p class="text-red-400">No se pudo obtener la ubicación. Por favor permite el acceso a la ubicación.</p>'
+            : '<p class="text-red-400">Could not get location. Please allow location access.</p>';
+        }
+      );
     });
 
     // Business form demo
