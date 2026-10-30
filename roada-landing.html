@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roada.app — Savings for High-Mileage Professionals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system_ui, sans-serif; }
+    .lang-es { display: none; }
+    body.spanish .lang-en { display: none; }
+    body.spanish .lang-es { display: block; }
+    body.spanish span.lang-en, body.spanish a.lang-en { display: none; }
+    body.spanish span.lang-es, body.spanish a.lang-es { display: inline; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-3">
+          <img src="imagine_images/IGYus.jpg" alt="Roada" class="h-10 w-auto object-contain" style="max-width: 180px;">
+          <span class="text-2xl font-bold tracking-tight text-slate-900">Roada</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <button id="langToggle" class="text-sm font-medium text-slate-600 hover:text-orange-600 px-3 py-1 rounded-full border border-slate-300">
+            <span class="lang-en">ES</span>
+            <span class="lang-es">EN</span>
+          </button>
+          <a href="#join" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-5 py-2 rounded-full text-sm transition">
+            <span class="lang-en">Join Waitlist</span>
+            <span class="lang-es">Lista de espera</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-orange-400 font-semibold tracking-wide uppercase text-sm mb-4">
+            <span class="lang-en">For Professionals Who Drive 100+ Miles a Day</span>
+            <span class="lang-es">Para profesionales que conducen más de 100 millas al día</span>
+          </p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            <span class="lang-en">Drive More.<br>Save More.</span>
+            <span class="lang-es">Conduce más.<br>Ahorra más.</span>
+          </h1>
+          <p class="text-xl text-slate-300 mb-8 max-w-lg">
+            <span class="lang-en">The membership savings app built for truckers, contractors, plumbers, and everyone who puts serious miles on a work truck. Discounts at gas stations and fast food, points for prizes, and extra cash back.</span>
+            <span class="lang-es">La aplicación de ahorro por membresía creada para camioneros, contratistas, plomeros y todos los que recorren muchos kilómetros en una camioneta de trabajo. Descuentos en gasolineras y comida rápida, puntos por premios y más reembolso.</span>
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#join" class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-full text-center transition shadow-lg">
+              <span class="lang-en">Get Early Access</span>
+              <span class="lang-es">Acceso anticipado</span>
+            </a>
+            <a href="#how" class="border border-slate-500 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-center transition">
+              <span class="lang-en">See How It Works</span>
+              <span class="lang-es">Cómo funciona</span>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="imagine_images/ZvjgE.jpg" alt="Roada member at gas station" class="rounded-2xl shadow-2xl w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem / Solution -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+          <span class="lang-en">No more paying full price on the road</span>
+          <span class="lang-es">No más pagar el precio completo en la carretera</span>
+        </h2>
+        <p class="text-lg text-slate-600">
+          <span class="lang-en">Major truck stop chains have their own programs. Independent stations and local fast food rarely offer real membership discounts for high-mileage work drivers. Roada fills that gap.</span>
+          <span class="lang-es">Las grandes cadenas de paradas de camiones tienen sus propios programas. Las gasolineras independientes y la comida rápida local rara vez ofrecen descuentos reales de membresía para conductores de alto kilometraje. Roada llena ese vacío.</span>
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-4xl mb-4">⛽</div>
+          <h3 class="font-bold text-xl mb-2">
+            <span class="lang-en">Gas Station Discounts</span>
+            <span class="lang-es">Descuentos en gasolineras</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-en">Show your Roada digital card or barcode at participating stations for member pricing and instant savings.</span>
+            <span class="lang-es">Muestra tu tarjeta digital o código de barras Roada en estaciones participantes para precios de miembro y ahorros instantáneos.</span>
+          </p>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-4xl mb-4">🍔</div>
+          <h3 class="font-bold text-xl mb-2">
+            <span class="lang-en">Fast Food & Partners</span>
+            <span class="lang-es">Comida rápida y socios</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-en">Discounts at participating restaurants. Partners display a “Roada Members Welcome” sign so you know where to stop.</span>
+            <span class="lang-es">Descuentos en restaurantes participantes. Los socios muestran un letrero “Miembros Roada bienvenidos” para que sepas dónde parar.</span>
+          </p>
+        </div>
+        <div class="bg-slate-50 p-8 rounded-2xl">
+          <div class="text-4xl mb-4">🎁</div>
+          <h3 class="font-bold text-xl mb-2">
+            <span class="lang-en">Points, Prizes & Tiers</span>
+            <span class="lang-es">Puntos, premios y niveles</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-en">Earn points on purchases. Mileage and food spend unlock Silver (2k miles/mo) and Gold (5k miles/mo) levels, plus a $500 monthly food spend bonus.</span>
+            <span class="lang-es">Gana puntos en compras. El kilometraje y el gasto en comida desbloquean niveles Plata (2k millas/mes) y Oro (5k millas/mes), más un bono de $500 de gasto mensual en comida.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Features -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+        <span class="lang-en">Built-In App Tools</span>
+        <span class="lang-es">Herramientas integradas en la app</span>
+      </h2>
+      <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <span class="lang-en">Track miles, scan food receipts, and unlock better rewards automatically.</span>
+        <span class="lang-es">Rastrea millas, escanea recibos de comida y desbloquea mejores recompensas automáticamente.</span>
+      </p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <div class="text-4xl mb-4">📍</div>
+          <h3 class="font-bold text-xl mb-2">
+            <span class="lang-en">Mileage Tracker</span>
+            <span class="lang-es">Rastreador de millas</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-en">On/off toggle with an always-on option. Automatically logs miles for high-mileage work drivers. Hits 2,000 miles/month for Silver and 5,000 for Gold.</span>
+            <span class="lang-es">Interruptor on/off con opción siempre activa. Registra millas automáticamente para conductores de alto kilometraje. Alcanza 2,000 millas/mes para Plata y 5,000 para Oro.</span>
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <div class="text-4xl mb-4">🧾</div>
+          <h3 class="font-bold text-xl mb-2">
+            <span class="lang-en">Food Receipt Scanner</span>
+            <span class="lang-es">Escáner de recibos de comida</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-en">Barcode reader for food receipts. Store them in-app for easy tracking and to unlock the $500 monthly food spend bonus.</span>
+            <span class="lang-es">Lector de códigos de barras para recibos de comida. Guárdalos en la app para rastrear fácilmente y desbloquear el bono de $500 de gasto mensual en comida.</span>
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <div class="text-4xl mb-4">🏆</div>
+          <h3 class="font-bold text-xl mb-2">
+            <span class="lang-en">Membership Levels</span>
+            <span class="lang-es">Niveles de membresía</span>
+          </h3>
+          <p class="text-slate-600">
+            <span class="lang-en"><strong>Silver:</strong> 2k miles/month. <strong>Gold:</strong> 5k miles/month. Plus $500/month food spend bonus for extra rewards and prizes.</span>
+            <span class="lang-es"><strong>Plata:</strong> 2k millas/mes. <strong>Oro:</strong> 5k millas/mes. Más bono de $500/mes en comida para recompensas y premios extra.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Card -->
+  <section class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+            <span class="lang-en">Your Digital Roada Card</span>
+            <span class="lang-es">Tu tarjeta digital Roada</span>
+          </h2>
+          <ul class="space-y-4 text-lg text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="text-orange-400 mt-1">✓</span>
+              <span class="lang-en">Barcode & QR for quick scanning at the register or pump</span>
+              <span class="lang-es">Código de barras y QR para escanear rápido en caja o surtidor</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-orange-400 mt-1">✓</span>
+              <span class="lang-en">Profile backend tracks your spending, points, and membership level</span>
+              <span class="lang-es">Backend de perfiles rastrea tu gasto, puntos y nivel de membresía</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-orange-400 mt-1">✓</span>
+              <span class="lang-en">Partner with a major credit card issuer for extra cash back on top of Roada discounts</span>
+              <span class="lang-es">Asociación con un emisor de tarjetas de crédito importante para más cash back además de los descuentos Roada</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-orange-400 mt-1">✓</span>
+              <span class="lang-en">Mileage tracker (on/off + always-on) and food receipt barcode scanner with store function</span>
+              <span class="lang-es">Rastreador de millas (on/off + siempre activo) y escáner de códigos de barras de recibos de comida con función de almacenamiento</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-orange-400 mt-1">✓</span>
+              <span class="lang-en">Silver at 2k miles/month, Gold at 5k miles/month, plus $500 monthly food spend bonus</span>
+              <span class="lang-es">Plata a 2k millas/mes, Oro a 5k millas/mes, más bono de $500 de gasto mensual en comida</span>
+            </li>
+          </ul>
+        </div>
+        <div class="flex justify-center">
+          <img src="imagine_images/iEEi1.jpg" alt="Roada digital membership card" class="rounded-2xl shadow-2xl max-w-md w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">
+        <span class="lang-en">How Roada Works</span>
+        <span class="lang-es">Cómo funciona Roada</span>
+      </h2>
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-bold text-lg mb-2">
+            <span class="lang-en">Join as a Member</span>
+            <span class="lang-es">Únete como miembro</span>
+          </h3>
+          <p class="text-slate-600 text-sm">
+            <span class="lang-en">Start with 100+ members. Create your profile and get your digital card.</span>
+            <span class="lang-es">Comienza con más de 100 miembros. Crea tu perfil y obtén tu tarjeta digital.</span>
+          </p>
+        </div>
+        <div>
+          <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-bold text-lg mb-2">
+            <span class="lang-en">Partners Join</span>
+            <span class="lang-es">Se unen socios</span>
+          </h3>
+          <p class="text-slate-600 text-sm">
+            <span class="lang-en">Invite gas stations and fast food. They display a Roada Members sign and offer discounts.</span>
+            <span class="lang-es">Invita gasolineras y comida rápida. Muestran un letrero de miembros Roada y ofrecen descuentos.</span>
+          </p>
+        </div>
+        <div>
+          <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-bold text-lg mb-2">
+            <span class="lang-en">Save & Earn</span>
+            <span class="lang-es">Ahorra y gana</span>
+          </h3>
+          <p class="text-slate-600 text-sm">
+            <span class="lang-en">Show your card, get the discount, earn points toward prizes.</span>
+            <span class="lang-es">Muestra tu tarjeta, obtén el descuento, gana puntos para premios.</span>
+          </p>
+        </div>
+        <div>
+          <div class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-bold text-lg mb-2">
+            <span class="lang-en">Level Up</span>
+            <span class="lang-es">Sube de nivel</span>
+          </h3>
+          <p class="text-slate-600 text-sm">
+            <span class="lang-en">Hit 2k miles for Silver or 5k for Gold. $500 monthly food spend unlocks a bonus. Track everything in-app.</span>
+            <span class="lang-es">Alcanza 2k millas para Plata o 5k para Oro. $500 de gasto mensual en comida desbloquea un bono. Rastrea todo en la app.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prizes -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+        <span class="lang-en">Prize Samples</span>
+        <span class="lang-es">Ejemplos de premios</span>
+      </h2>
+      <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <span class="lang-en">Earn points toward real rewards. Sample prizes include an iPhone, Roada leather jacket, boots, and hat.</span>
+        <span class="lang-es">Gana puntos para recompensas reales. Los premios de muestra incluyen un iPhone, chaqueta de cuero Roada, botas y gorra.</span>
+      </p>
+      <div class="flex justify-center">
+        <img src="imagine_images/RfW4c.jpg" alt="Roada prize samples: iPhone, leather jacket, boots, hat" class="rounded-2xl shadow-lg max-w-4xl w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Mock App Screens -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4">
+        <span class="lang-en">App Screens</span>
+        <span class="lang-es">Pantallas de la app</span>
+      </h2>
+      <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">
+        <span class="lang-en">Mileage tracker with always-on option and food receipt scanner with stored receipts and $500 bonus progress.</span>
+        <span class="lang-es">Rastreador de millas con opción siempre activa y escáner de recibos de comida con recibos almacenados y progreso del bono de $500.</span>
+      </p>
+      <div class="grid md:grid-cols-2 gap-12 items-start justify-center">
+        <div class="text-center">
+          <img src="imagine_images/X03WZ.jpg" alt="Roada mileage tracker app screen" class="rounded-2xl shadow-2xl mx-auto max-w-xs w-full">
+          <p class="mt-4 font-semibold">
+            <span class="lang-en">Mileage Tracker</span>
+            <span class="lang-es">Rastreador de millas</span>
+          </p>
+        </div>
+        <div class="text-center">
+          <img src="imagine_images/mBDqm.jpg" alt="Roada food receipt scanner app screen" class="rounded-2xl shadow-2xl mx-auto max-w-xs w-full">
+          <p class="mt-4 font-semibold">
+            <span class="lang-en">Food Receipt Scanner</span>
+            <span class="lang-es">Escáner de recibos de comida</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6">
+        <span class="lang-en">Start in the US. Expand to Canada & Mexico.</span>
+        <span class="lang-es">Comienza en EE.UU. Expande a Canadá y México.</span>
+      </h2>
+      <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10">
+        <span class="lang-en">Banks and food outlets as sponsors. Full Spanish toggle from day one. Built for the professionals who keep America moving.</span>
+        <span class="lang-es">Bancos y puntos de comida como patrocinadores. Cambio a español desde el primer día. Creado para los profesionales que mantienen a América en movimiento.</span>
+      </p>
+      <div class="flex flex-wrap justify-center gap-6 text-slate-500 font-medium">
+        <span class="bg-white px-6 py-3 rounded-full shadow-sm">🇺🇸 United States</span>
+        <span class="bg-white px-6 py-3 rounded-full shadow-sm">🇨🇦 Canada</span>
+        <span class="bg-white px-6 py-3 rounded-full shadow-sm">🇲🇽 México</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join CTA -->
+  <section id="join" class="py-24 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold mb-4">
+        <span class="lang-en">Ready to save on every mile?</span>
+        <span class="lang-es">¿Listo para ahorrar en cada milla?</span>
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        <span class="lang-en">Join the early member list. Be one of the first 100+ and help shape the partner network.</span>
+        <span class="lang-es">Únete a la lista de miembros anticipados. Sé uno de los primeros 100+ y ayuda a formar la red de socios.</span>
+      </p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input type="email" placeholder="Your email / Tu correo" class="flex-1 px-5 py-4 rounded-full text-slate-900 focus:outline-none focus:ring-2 focus:ring-white">
+        <button type="submit" class="bg-slate-900 hover:bg-slate-800 text-white font-bold px-8 py-4 rounded-full transition">
+          <span class="lang-en">Join</span>
+          <span class="lang-es">Unirse</span>
+        </button>
+      </form>
+      <p class="text-sm mt-4 opacity-80">
+        <span class="lang-en">roada.app • No spam. Just the road ahead.</span>
+        <span class="lang-es">roada.app • Sin spam. Solo el camino por delante.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="text-xl font-bold text-white">Roada</span>
+      </div>
+      <p class="text-sm">
+        <span class="lang-en">Savings membership for high-mileage professionals. Start in the US, then Canada & Mexico.</span>
+        <span class="lang-es">Membresía de ahorro para profesionales de alto kilometraje. Comienza en EE.UU., luego Canadá y México.</span>
+      </p>
+      <p class="text-xs mt-6">© 2026 Roada.app. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('langToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('spanish');
+    });
+  </script>
+</body>
+</html>
